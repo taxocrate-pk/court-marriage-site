@@ -15,8 +15,10 @@ import PrivacyPolicy from './components/Pages/PrivacyPolicy.jsx';
 import TermsOfService from './components/Pages/TermsOfService.jsx';
 import NotFound from './components/Pages/NotFound.jsx';
 import CourtMarriageKarachi from './components/Pages/Services/CourtMarriageKarachi.jsx';
+import CourtMarriageLahore from './components/Pages/Services/CourtMarriageLahore.jsx';
 import CourtMarriageIslamabad from './components/Pages/Services/CourtMarriageIslamabad.jsx';
 import CourtMarriageRawalpindi from './components/Pages/Services/CourtMarriageRawalpindi.jsx';
+import CourtMarriageFaisalabad from './components/Pages/Services/CourtMarriageFaisalabad.jsx';
 import CourtMarriagePunjab from './components/Pages/Services/CourtMarriagePunjab.jsx';
 
 function App() {
@@ -36,8 +38,10 @@ function App() {
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/terms-of-service" element={<TermsOfService />} />
         <Route path="/services/court-marriage-karachi" element={<CourtMarriageKarachi />} />
+        <Route path="/services/court-marriage-lahore" element={<CourtMarriageLahore />} />
         <Route path="/services/court-marriage-islamabad" element={<CourtMarriageIslamabad />} />
         <Route path="/services/court-marriage-rawalpindi" element={<CourtMarriageRawalpindi />} />
+        <Route path="/services/court-marriage-faisalabad" element={<CourtMarriageFaisalabad />} />
         <Route path="/services/court-marriage-punjab" element={<CourtMarriagePunjab />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
