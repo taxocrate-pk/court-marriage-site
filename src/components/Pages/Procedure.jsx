@@ -57,7 +57,7 @@ const faqs = [
 ];
 
 const Procedure = () => {
-  const waNumber = '923322908556';
+  const waNumber = '923331127834';
   const waMessage = encodeURIComponent('Assalam-o-Alaikum Shah Sahib, Procedure page dekh kar rabta kar raha hoon. Mujhe Court Marriage process aur documents ki details chahiye.');
   const waUrl = `https://wa.me/${waNumber}?text=${waMessage}`;
 
@@ -157,7 +157,7 @@ const Procedure = () => {
               A practical step-by-step guide to legal eligibility, free consent, Nikah arrangements, Nikah Nama documentation, marriage registration and post-registration certificates. The correct procedure depends on the couple’s city, age, marital status, nationality and whether the case is local, overseas or affected by a genuine protection issue.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mt-8">
-              <a href="tel:+923322908556" className="px-8 py-4 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded-xl no-underline">Call +92 332 2908556</a>
+              <a href="tel:+923331127834" className="px-8 py-4 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded-xl no-underline">Call +92 333 1127834</a>
               <a href={waUrl} target="_blank" rel="noopener noreferrer" className="px-8 py-4 border border-slate-700 hover:border-blue-500 text-white font-bold rounded-xl no-underline">WhatsApp Case Review</a>
             </div>
           </div>
@@ -302,7 +302,7 @@ const Procedure = () => {
           <h2 className="text-2xl md:text-3xl font-black text-white mb-4 relative z-10">Confidential Court Marriage consultation</h2>
           <p className="text-slate-400 mb-8 relative z-10 max-w-3xl mx-auto">Share your city, ages, nationality, marital status and whether both parties can attend. The legal team can identify the appropriate procedure before giving a fee or timeline.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center relative z-10">
-            <a href="tel:+923322908556" className="px-10 py-4 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded-xl transition-all text-center no-underline">Call Now</a>
+            <a href="tel:+923331127834" className="px-10 py-4 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded-xl transition-all text-center no-underline">Call Now</a>
             <a href={waUrl} target="_blank" rel="noopener noreferrer" className="px-10 py-4 bg-transparent border border-slate-700 hover:border-slate-500 text-white font-bold rounded-xl transition-all text-center no-underline">Message on WhatsApp</a>
           </div>
         </motion.section>

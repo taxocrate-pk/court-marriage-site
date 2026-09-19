@@ -22,7 +22,7 @@ export default function OnlineNikahCityLayout({
   const description = `Online Nikah in ${city} with legal guidance on consent, witnesses, Nikah Nama, registration, overseas cases and documentation. Confidential consultation available.`;
 
   const waMessage = encodeURIComponent(`Assalam-o-Alaikum Shah Sahib, mujhe Online Nikah in ${city} ke process, documents aur fees ke bare mein maloomat chahiye.`);
-  const waUrl = `https://wa.me/${phone.replace(/\D/g, '')}?text=${waMessage}`;
+  const waUrl = `https://wa.me/923331127834?text=${waMessage}`;
 
   const legalServiceSchema = {
     '@context': 'https://schema.org',
@@ -31,7 +31,7 @@ export default function OnlineNikahCityLayout({
     url: `${BASE_URL}${path}`,
     areaServed: city,
     serviceType: 'Online Nikah legal assistance and marriage documentation guidance',
-    telephone: displayPhone,
+    telephone: '+92 333 1127834',
     description,
   };
 

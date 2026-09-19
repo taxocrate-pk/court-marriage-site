@@ -74,7 +74,7 @@ export default function TermsOfService() {
 
           <section>
             <h2 className="text-2xl font-bold text-white mb-4">Contact</h2>
-            <p>Questions about these terms or a proposed service can be directed to the Court Marriage Site legal team through the main contact number, +92 332 2908556.</p>
+            <p>Questions about these terms or a proposed service can be directed to the Court Marriage Site legal team through the main contact number, +92 333 1127834.</p>
           </section>
         </div>
       </div>

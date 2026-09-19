@@ -77,7 +77,7 @@ const Home = () => {
     '@type': 'LegalService',
     name: 'Court Marriage Site',
     url: 'https://courtmarriage.site/',
-    telephone: '+92 332 2908556',
+    telephone: '+92 333 1127834',
     areaServed: 'Pakistan',
     serviceType: ['Court Marriage', 'Online Nikah', 'Nikah Nama Documentation', 'Marriage Registration Assistance'],
     description: 'Legal assistance for court marriage, Online Nikah, Nikah Nama documentation and marriage registration in Pakistan.'
@@ -108,8 +108,8 @@ const Home = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
-              <a href="tel:+923322908556" className="w-full sm:w-auto px-8 py-4 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded-xl shadow-lg transition-all text-center no-underline">Call for Case Review</a>
-              <a href="https://wa.me/923322908556" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto px-8 py-4 border border-slate-700 hover:border-blue-500 text-white font-bold rounded-xl transition-all text-center no-underline">WhatsApp Now</a>
+              <a href="tel:+923331127834" className="w-full sm:w-auto px-8 py-4 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded-xl shadow-lg transition-all text-center no-underline">Call for Case Review</a>
+              <a href="https://wa.me/923331127834" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto px-8 py-4 border border-slate-700 hover:border-blue-500 text-white font-bold rounded-xl transition-all text-center no-underline">WhatsApp Now</a>
             </div>
           </div>
 
@@ -285,7 +285,7 @@ const Home = () => {
           <h2 className="text-3xl md:text-4xl font-black text-white mb-5">Discuss your Court Marriage case confidentially</h2>
           <p className="text-slate-400 max-w-3xl mx-auto mb-8 leading-relaxed">Share your city, ages, nationality, marital status and whether both parties can attend. The legal team can then identify the appropriate Nikah, registration and documentation route before giving a fee or timeline.</p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <a href="tel:+923322908556" className="px-8 py-4 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded-xl no-underline">Call +92 332 2908556</a>
+            <a href="tel:+923331127834" className="px-8 py-4 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded-xl no-underline">Call +92 333 1127834</a>
             <Link to="/contact" className="px-8 py-4 border border-slate-700 hover:border-blue-500 text-white font-bold rounded-xl no-underline">Contact Legal Team</Link>
           </div>
         </div>

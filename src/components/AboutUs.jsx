@@ -30,7 +30,7 @@ const AboutUs = () => {
     '@type': 'LegalService',
     name: 'Court Marriage Site',
     url: 'https://courtmarriage.site/',
-    telephone: '+92 332 2908556',
+    telephone: '+92 333 1127834',
     areaServed: 'Pakistan',
     serviceType: ['Court Marriage', 'Online Nikah', 'Marriage Registration Assistance'],
     description: 'Professional legal assistance for court marriage, Online Nikah, Nikah Nama documentation and marriage registration in Pakistan.'
@@ -211,8 +211,8 @@ const AboutUs = () => {
           <h2 className="text-3xl md:text-4xl font-black text-white mb-6">Speak with the Court Marriage legal team</h2>
           <p className="text-slate-400 mb-10 max-w-3xl mx-auto leading-relaxed">Tell us your city, ages, nationality, current marital status and whether both parties can attend. That information allows a useful first assessment of the Nikah, registration and documentation route.</p>
           <div className="flex flex-wrap justify-center gap-4">
-            <a href="tel:+923322908556" className="px-10 py-5 bg-blue-600 hover:bg-blue-500 text-white font-black rounded-2xl transition-all shadow-2xl shadow-blue-600/30 inline-block no-underline">Call +92 332 2908556</a>
-            <a href="https://wa.me/923322908556" target="_blank" rel="noopener noreferrer" className="px-10 py-5 bg-slate-900 border border-slate-800 text-white font-black rounded-2xl hover:bg-slate-800 transition-all no-underline">WhatsApp Support</a>
+            <a href="tel:+923331127834" className="px-10 py-5 bg-blue-600 hover:bg-blue-500 text-white font-black rounded-2xl transition-all shadow-2xl shadow-blue-600/30 inline-block no-underline">Call +92 333 1127834</a>
+            <a href="https://wa.me/923331127834" target="_blank" rel="noopener noreferrer" className="px-10 py-5 bg-slate-900 border border-slate-800 text-white font-black rounded-2xl hover:bg-slate-800 transition-all no-underline">WhatsApp Support</a>
           </div>
         </section>
       </div>

@@ -59,7 +59,7 @@ export default function PrivacyPolicy() {
 
           <section>
             <h2 className="text-2xl font-bold text-white mb-4">Contact about privacy</h2>
-            <p>If you believe information has been sent in error or you have a question about how an enquiry is being handled, contact the legal team through the main website number, +92 332 2908556, and identify the communication or matter concerned.</p>
+            <p>If you believe information has been sent in error or you have a question about how an enquiry is being handled, contact the legal team through the main website number, +92 333 1127834, and identify the communication or matter concerned.</p>
           </section>
         </div>
       </div>

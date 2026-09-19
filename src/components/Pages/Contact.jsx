@@ -22,7 +22,7 @@ export default function Contact() {
       `Service: ${form.service}`,
       `Details: ${form.message || 'Not provided'}`
     ].join('\n');
-    window.open(`https://wa.me/923322908556?text=${encodeURIComponent(message)}`, '_blank', 'noopener,noreferrer');
+    window.open(`https://wa.me/923331127834?text=${encodeURIComponent(message)}`, '_blank', 'noopener,noreferrer');
   };
 
   const contactSchema = {
@@ -114,7 +114,7 @@ export default function Contact() {
             <div className="p-7 rounded-[2rem] bg-slate-900 border border-slate-800">
               <Phone className="text-blue-500 mb-4" size={32} />
               <h2 className="text-2xl font-black text-white mb-4">Direct contact</h2>
-              <a href="tel:+923322908556" className="text-blue-400 font-bold text-lg no-underline hover:text-blue-300">+92 332 2908556</a>
+              <a href="tel:+923331127834" className="text-blue-400 font-bold text-lg no-underline hover:text-blue-300">+92 333 1127834</a>
               <p className="text-slate-500 text-sm mt-3 leading-relaxed">General Court Marriage Site helpline for initial enquiries and WhatsApp case intake.</p>
             </div>
 

@@ -57,7 +57,7 @@ const faqs = [
 ];
 
 const OnlineNikah = () => {
-  const waNumber = '923322908556';
+  const waNumber = '923331127834';
   const waMessage = encodeURIComponent('Assalam-o-Alaikum Shah Sahib, mujhe Online Nikah ke process, documents aur fees ke bare mein maloomat chahiye.');
   const waUrl = `https://wa.me/${waNumber}?text=${waMessage}`;
 
@@ -76,7 +76,7 @@ const OnlineNikah = () => {
     '@type': 'LegalService',
     name: 'Online Nikah in Pakistan - Court Marriage Site',
     url: 'https://courtmarriage.site/online-nikah-navigating-the-digital-path-to-marriage',
-    telephone: '+92 332 2908556',
+    telephone: '+92 333 1127834',
     areaServed: 'Pakistan',
     serviceType: 'Online Nikah legal and documentation assistance',
     description: 'Online Nikah assistance for Pakistan and overseas cases, including legal review, documents, registration and post-marriage certificate guidance.'
@@ -134,7 +134,7 @@ const OnlineNikah = () => {
 
             <div className="flex flex-col sm:flex-row gap-4">
               <a href={waUrl} target="_blank" rel="noopener noreferrer" className="px-7 py-4 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded-xl text-center no-underline flex items-center justify-center gap-2"><MessageCircle size={18} /> Discuss Online Nikah</a>
-              <a href="tel:+923322908556" className="px-7 py-4 border border-slate-700 hover:border-blue-500 text-white font-bold rounded-xl text-center no-underline">Call +92 332 2908556</a>
+              <a href="tel:+923331127834" className="px-7 py-4 border border-slate-700 hover:border-blue-500 text-white font-bold rounded-xl text-center no-underline">Call +92 333 1127834</a>
             </div>
           </div>
 

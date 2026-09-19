@@ -50,8 +50,8 @@ const CourtMarriageKarachi = () => (
     metaTitle="Court Marriage in Karachi | Nikah & Registration Help"
     metaDescription="Court Marriage in Karachi with legal guidance on consent, Nikah Nama, registration, documents, fees and overseas cases. Updated 2026."
     description="Court Marriage in Karachi requires more than a short ceremony and a generic affidavit. A sound process starts with legal age, free consent, identity and marital-status checks, then moves to the Nikah, accurate Nikah Nama completion and registration through the competent local channel. Our approach is designed for couples who want lawful, discreet and properly documented marriage assistance without misleading courtroom or same-day promises."
-    phone="+923322908556"
-    displayPhone="+92 332 2908556"
+    phone="+923331127834"
+    displayPhone="+92 333 1127834"
     areas={['Gulistan-e-Johar', 'Gulshan-e-Iqbal', 'Clifton', 'DHA', 'Karachi East', 'Karachi South', 'Karachi Central', 'Malir']}
     localPlanning="Karachi cases should be planned around the parties’ actual residence, identity documents and the place of registration rather than around the nearest court building. The city has several districts and local-government jurisdictions, so the competent registration route should be confirmed before forms are filled. For couples facing family opposition, a separate safety and legal-protection assessment may also be appropriate."
     localRegistration="In Karachi, the registration stage should be matched to the competent Nikah Registrar and local authority for the relevant area. The Nikah Nama must be completed accurately before later certificate work is undertaken. Sindh also has its own child-marriage law, so age verification is not a formality: the Sindh Child Marriages Restraint Act, 2013 treats a male or female under eighteen as a child."

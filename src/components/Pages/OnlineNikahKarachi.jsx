@@ -19,8 +19,8 @@ export default function OnlineNikahKarachi() {
     <OnlineNikahCityLayout
       city="Karachi"
       path="/online-nikah-karachi"
-      phone="+923322908556"
-      displayPhone="+92 332 2908556"
+      phone="+923331127834"
+      displayPhone="+92 333 1127834"
       intro="Online Nikah in Karachi can be a practical option where one or both parties cannot conveniently attend the same place, but the process should be planned as a complete legal and documentation matter rather than treated as a simple video ceremony. We assist with consent, witnesses, Nikah Nama preparation, local registration guidance and overseas-case coordination."
       localOverview={[
         'Karachi cases often involve couples living in different districts of the city, overseas Pakistanis with family ties in Sindh, or one party working abroad while the other remains in Karachi. These situations can be handled more efficiently when the parties’ identities, marital status and intended registration route are reviewed at the beginning instead of after the Nikah has already taken place.',

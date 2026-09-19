@@ -49,7 +49,7 @@ const Footer = () => {
                 <span className="text-blue-500">📞</span> 021-37451359
               </p>
               <p className="text-slate-400 text-sm flex items-center gap-2">
-                <span className="text-blue-500">💬</span> +92 332 2908556
+                <span className="text-blue-500">💬</span> +92 333 1127834
               </p>
               <p className="text-slate-400 text-sm flex items-start gap-2">
                 <span className="text-blue-500">📍</span>
