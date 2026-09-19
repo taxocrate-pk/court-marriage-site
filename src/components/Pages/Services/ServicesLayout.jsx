@@ -18,6 +18,7 @@ const ServiceLayout = ({
   areas = [],
   localRegistration,
   localPlanning,
+  officeAddress,
   faqs = []
 }) => {
   const waNumber = phone.replace(/\D/g, '');
@@ -91,7 +92,15 @@ const ServiceLayout = ({
     areaServed: city,
     serviceType: `Court Marriage legal assistance in ${city}`,
     telephone: displayPhone,
-    description: metaDescription
+    description: metaDescription,
+    ...(officeAddress ? {
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: officeAddress,
+        addressLocality: city,
+        addressCountry: 'PK'
+      }
+    } : {})
   };
 
   const breadcrumbSchema = {
@@ -146,6 +155,15 @@ const ServiceLayout = ({
             <div className="p-8 rounded-3xl bg-slate-900/50 border border-slate-800 backdrop-blur-sm">
               <h2 className="text-2xl font-bold text-white mb-4">Local planning for Court Marriage in {city}</h2>
               <p className="text-slate-400 leading-relaxed">{localPlanning}</p>
+              {officeAddress && (
+                <div className="mt-6 p-5 rounded-2xl bg-slate-950 border border-blue-500/20 flex gap-4 items-start">
+                  <MapPin className="text-blue-500 shrink-0 mt-0.5" size={22} />
+                  <div>
+                    <h3 className="text-white font-bold mb-1">{city} Chamber Address</h3>
+                    <p className="text-slate-400 leading-relaxed">{officeAddress}</p>
+                  </div>
+                </div>
+              )}
               {areas.length > 0 && (
                 <div className="flex flex-wrap gap-2 mt-6">
                   {areas.map((area) => (
