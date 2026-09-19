@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router';
 import { motion } from 'framer-motion';
-import heroNikahImage from '../../assets/wedding pic.webp';
 import { CheckCircle, FileText, Globe, Heart, MapPin, Scale, Shield, Users } from 'lucide-react';
 import SEO from '../SEO.jsx';
+import WeddingHeroImage from '../WeddingHeroImage.jsx';
 
 const faqs = [
   {
@@ -94,9 +94,9 @@ const Home = () => {
 
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 lg:pt-0">
         <div className="absolute top-0 -left-20 w-96 h-96 bg-blue-600/20 rounded-full blur-[120px]" />
-        <div className="max-w-7xl mx-auto px-6 relative z-10 w-full grid lg:grid-cols-2 gap-12 items-center">
+        <div className="max-w-7xl mx-auto px-6 relative z-10 w-full grid lg:grid-cols-2 gap-10 lg:gap-12 items-center pb-12 lg:pb-0">
           <div className="text-center lg:text-left">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-black text-white leading-tight mb-7 mt-20 tracking-tighter">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-black text-white leading-tight mb-7 mt-16 lg:mt-20 tracking-tighter">
               <motion.span variants={revealVariants} initial="hidden" animate="visible" className="block pb-2">Court Marriage in Pakistan</motion.span>
               <motion.span variants={revealVariants} initial="hidden" animate="visible" transition={{ delay: 0.35 }} className="text-blue-500 block pb-3">& Online Nikah Services</motion.span>
             </h1>
@@ -113,11 +113,12 @@ const Home = () => {
             </div>
           </div>
 
-          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.9 }} className="hidden lg:flex justify-center items-center">
-            <div className="rounded-[3rem] overflow-hidden border border-white/5 shadow-2xl relative group w-full max-w-lg">
-              <img src={heroNikahImage} alt="Court Marriage and Online Nikah legal services in Pakistan" className="w-full h-auto object-cover transform scale-105 group-hover:scale-100 transition-transform duration-1000" fetchPriority="high" />
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-transparent to-transparent" />
-            </div>
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.9 }} className="flex justify-center items-center w-full mt-2 lg:mt-16">
+            <WeddingHeroImage
+              alt="Court Marriage and Online Nikah legal services in Pakistan"
+              priority
+              className="max-w-lg mx-auto lg:mx-0"
+            />
           </motion.div>
         </div>
       </section>
