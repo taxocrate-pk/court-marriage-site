@@ -3,6 +3,7 @@ import { Link } from 'react-router';
 import { motion } from 'framer-motion';
 import { CheckCircle, FileCheck2, Globe, MessageCircle, Scale, ShieldCheck, Users } from 'lucide-react';
 import SEO from '../SEO.jsx';
+import WeddingHeroImage from '../WeddingHeroImage.jsx';
 
 const faqs = [
   {
@@ -137,28 +138,37 @@ const OnlineNikah = () => {
             </div>
           </div>
 
-          <motion.aside initial={{ opacity: 0, x: 30 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.7 }} className="lg:sticky lg:top-28 bg-gradient-to-br from-slate-900 to-slate-950 p-6 md:p-10 rounded-[2rem] md:rounded-[2.5rem] border border-slate-800 shadow-2xl">
-            <FileCheck2 className="text-blue-500 mb-5" size={38} />
-            <h2 className="text-2xl font-bold text-white mb-7">Online Nikah documents commonly reviewed</h2>
-            <div className="space-y-6">
-              {[
-                ['Identity documents', 'CNIC, NICOP or passport as appropriate for each party.'],
-                ['Previous-marriage records', 'Relevant divorce, khula, talaq-effectiveness or death documentation where applicable.'],
-                ['Witness information', 'Identity particulars for witnesses arranged for the proposed Nikah.'],
-                ['Authority documents', 'Power of attorney or representative authority where the chosen structure requires it.'],
-                ['Overseas formalities', 'Translation, attestation or consular requirements depending on the destination and purpose.']
-              ].map(([title, text]) => (
-                <div key={title} className="flex gap-4">
-                  <CheckCircle size={20} className="text-blue-500 shrink-0 mt-1" />
-                  <div>
-                    <h3 className="text-white font-bold">{title}</h3>
-                    <p className="text-sm text-slate-500 mt-1">{text}</p>
+          <div className="space-y-6 lg:sticky lg:top-28">
+            <motion.div initial={{ opacity: 0, scale: 0.97 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.7 }}>
+              <WeddingHeroImage
+                alt="Online Nikah and wedding legal services in Pakistan"
+                priority
+              />
+            </motion.div>
+
+            <motion.aside initial={{ opacity: 0, x: 30 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.7, delay: 0.1 }} className="bg-gradient-to-br from-slate-900 to-slate-950 p-6 md:p-10 rounded-[2rem] md:rounded-[2.5rem] border border-slate-800 shadow-2xl">
+              <FileCheck2 className="text-blue-500 mb-5" size={38} />
+              <h2 className="text-2xl font-bold text-white mb-7">Online Nikah documents commonly reviewed</h2>
+              <div className="space-y-6">
+                {[
+                  ['Identity documents', 'CNIC, NICOP or passport as appropriate for each party.'],
+                  ['Previous-marriage records', 'Relevant divorce, khula, talaq-effectiveness or death documentation where applicable.'],
+                  ['Witness information', 'Identity particulars for witnesses arranged for the proposed Nikah.'],
+                  ['Authority documents', 'Power of attorney or representative authority where the chosen structure requires it.'],
+                  ['Overseas formalities', 'Translation, attestation or consular requirements depending on the destination and purpose.']
+                ].map(([title, text]) => (
+                  <div key={title} className="flex gap-4">
+                    <CheckCircle size={20} className="text-blue-500 shrink-0 mt-1" />
+                    <div>
+                      <h3 className="text-white font-bold">{title}</h3>
+                      <p className="text-sm text-slate-500 mt-1">{text}</p>
+                    </div>
                   </div>
-                </div>
-              ))}
-            </div>
-            <p className="text-xs text-slate-500 mt-8 leading-relaxed">Exact documents depend on nationality, location, marital history, representation and the intended use of the marriage record. A case review should come before a fixed checklist.</p>
-          </motion.aside>
+                ))}
+              </div>
+              <p className="text-xs text-slate-500 mt-8 leading-relaxed">Exact documents depend on nationality, location, marital history, representation and the intended use of the marriage record. A case review should come before a fixed checklist.</p>
+            </motion.aside>
+          </div>
         </section>
 
         <section className="py-24 max-w-5xl">
