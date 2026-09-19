@@ -3,6 +3,7 @@ import { Link } from 'react-router';
 import { motion } from 'framer-motion';
 import { CheckCircle2, FileText, Scale, ShieldCheck } from 'lucide-react';
 import SEO from '../SEO.jsx';
+import WeddingHeroImage from '../WeddingHeroImage.jsx';
 
 const faqs = [
   {
@@ -146,18 +147,25 @@ const Procedure = () => {
       <div className="absolute bottom-0 left-0 w-[300px] h-[300px] bg-blue-900/5 rounded-full blur-[100px] -z-0" />
 
       <div className="max-w-6xl mx-auto relative z-10">
-        <motion.header initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="text-center mb-20 max-w-4xl mx-auto">
-          <div className="inline-block px-4 py-1.5 rounded-full border border-blue-500/30 bg-blue-500/10 text-blue-400 text-xs font-bold uppercase tracking-widest mb-6">Updated 2026</div>
-          <h1 className="text-4xl md:text-6xl font-black text-white tracking-tighter mb-6">
-            Court Marriage <span className="text-blue-500">Procedure in Pakistan</span>
-          </h1>
-          <p className="text-slate-400 text-lg leading-relaxed">
-            A practical step-by-step guide to legal eligibility, free consent, Nikah arrangements, Nikah Nama documentation, marriage registration and post-registration certificates. The correct procedure depends on the couple’s city, age, marital status, nationality and whether the case is local, overseas or affected by a genuine protection issue.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
-            <a href="tel:+923322908556" className="px-8 py-4 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded-xl no-underline">Call +92 332 2908556</a>
-            <a href={waUrl} target="_blank" rel="noopener noreferrer" className="px-8 py-4 border border-slate-700 hover:border-blue-500 text-white font-bold rounded-xl no-underline">WhatsApp Case Review</a>
+        <motion.header initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="grid lg:grid-cols-2 gap-10 lg:gap-14 items-center mb-20">
+          <div className="text-center lg:text-left">
+            <div className="inline-block px-4 py-1.5 rounded-full border border-blue-500/30 bg-blue-500/10 text-blue-400 text-xs font-bold uppercase tracking-widest mb-6">Updated 2026</div>
+            <h1 className="text-4xl md:text-6xl font-black text-white tracking-tighter mb-6">
+              Court Marriage <span className="text-blue-500">Procedure in Pakistan</span>
+            </h1>
+            <p className="text-slate-400 text-lg leading-relaxed">
+              A practical step-by-step guide to legal eligibility, free consent, Nikah arrangements, Nikah Nama documentation, marriage registration and post-registration certificates. The correct procedure depends on the couple’s city, age, marital status, nationality and whether the case is local, overseas or affected by a genuine protection issue.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mt-8">
+              <a href="tel:+923322908556" className="px-8 py-4 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded-xl no-underline">Call +92 332 2908556</a>
+              <a href={waUrl} target="_blank" rel="noopener noreferrer" className="px-8 py-4 border border-slate-700 hover:border-blue-500 text-white font-bold rounded-xl no-underline">WhatsApp Case Review</a>
+            </div>
           </div>
+
+          <WeddingHeroImage
+            alt="Wedding couple illustrating the Court Marriage procedure in Pakistan"
+            priority
+          />
         </motion.header>
 
         <section className="grid lg:grid-cols-2 gap-12 mb-24">
@@ -295,7 +303,7 @@ const Procedure = () => {
           <p className="text-slate-400 mb-8 relative z-10 max-w-3xl mx-auto">Share your city, ages, nationality, marital status and whether both parties can attend. The legal team can identify the appropriate procedure before giving a fee or timeline.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center relative z-10">
             <a href="tel:+923322908556" className="px-10 py-4 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded-xl transition-all text-center no-underline">Call Now</a>
-            <a href={waUrl} target="_blank" rel="noopener noreferrer" className="px-10 py-4 bg-transparent border border-slate-700 hover:border-blue-500 text-white font-bold rounded-xl transition-all text-center no-underline">Message on WhatsApp</a>
+            <a href={waUrl} target="_blank" rel="noopener noreferrer" className="px-10 py-4 bg-transparent border border-slate-700 hover:border-slate-500 text-white font-bold rounded-xl transition-all text-center no-underline">Message on WhatsApp</a>
           </div>
         </motion.section>
       </div>
