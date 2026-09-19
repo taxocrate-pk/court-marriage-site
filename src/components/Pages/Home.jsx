@@ -1,240 +1,294 @@
 import React from 'react';
+import { Link } from 'react-router';
 import { motion } from 'framer-motion';
 import heroNikahImage from '../../assets/wedding pic.webp';
-import MapPin from 'lucide-react/dist/esm/icons/map-pin';
-import CheckCircle from 'lucide-react/dist/esm/icons/check-circle';
-import Globe from 'lucide-react/dist/esm/icons/globe';
-import Scale from 'lucide-react/dist/esm/icons/scale';
-import Shield from 'lucide-react/dist/esm/icons/shield';
-import Heart from 'lucide-react/dist/esm/icons/heart';
-import Gavel from 'lucide-react/dist/esm/icons/gavel';
-import Users from 'lucide-react/dist/esm/icons/users';
-import FileText from 'lucide-react/dist/esm/icons/file-text';
-import HelpCircle from 'lucide-react/dist/esm/icons/help-circle';
+import { CheckCircle, FileText, Globe, Heart, MapPin, Scale, Shield, Users } from 'lucide-react';
+import SEO from '../SEO.jsx';
+
+const faqs = [
+  {
+    q: 'What is court marriage in Pakistan?',
+    a: 'Court marriage is a commonly used expression for a marriage chosen by an adult couple and completed with legal and documentary assistance. It does not normally mean that a judge performs the Nikah in a courtroom. For Muslim couples, the practical process usually involves legal eligibility, free consent, Nikah formalities, careful Nikah Nama completion and registration through the competent Nikah-registration framework.'
+  },
+  {
+    q: 'Is court marriage legal in Pakistan?',
+    a: 'A marriage that satisfies the applicable legal and religious requirements and is properly registered can be legally recognised in Pakistan. The exact requirements depend on the parties, their religion, age, marital status and province or territory. The phrase court marriage is informal; the legal validity comes from the underlying marriage and registration process, not from the label itself.'
+  },
+  {
+    q: 'Does court marriage require a judge or court appearance?',
+    a: 'Not automatically. A Muslim Nikah is not ordinarily solemnised by a judge merely because people call it a court marriage. Lawyers may prepare affidavits or advise on protective proceedings where needed, but litigation and marriage registration are separate matters. Court action should be used only where the facts justify it.'
+  },
+  {
+    q: 'What documents are normally required for court marriage?',
+    a: 'Valid identity documents for both parties are the starting point. Witness particulars and previous-marriage documents may also be required. Overseas Pakistanis or foreign nationals can need passports, NICOP, powers of attorney, translations, attestations or other supporting papers depending on the case and intended use of the marriage documents.'
+  },
+  {
+    q: 'What is the legal age for court marriage in Pakistan?',
+    a: 'There is no responsible single age answer for every part of Pakistan because child-marriage laws can differ by province or territory and can change. The current rule applicable to the place of marriage should be checked before proceeding. Identity documents should also be reviewed carefully where either party is close to the legal threshold.'
+  },
+  {
+    q: 'Can adults marry without family permission?',
+    a: 'Where both parties are legally eligible and genuinely consenting, free consent is central to the marriage. Family disagreement can create practical or safety concerns, but it does not replace the couple’s own consent. If there are threats, coercion, confinement or harassment, separate advice on protection may be required.'
+  },
+  {
+    q: 'Can court marriage be completed on the same day?',
+    a: 'A straightforward Nikah may sometimes be arranged quickly after documents and eligibility have been checked, but a blanket same-day promise is not appropriate. Registration, certified copies and later computerised certificates may follow separate administrative timelines. Each stage should be explained separately.'
+  },
+  {
+    q: 'Is Online Nikah valid in Pakistan?',
+    a: 'Remote Nikah arrangements can be possible, especially for overseas couples, but the legal and Sharia position depends on how the Nikah is structured, how consent and witnesses are handled, and whether any representative or power of attorney is involved. A video call alone should not be advertised as automatically making every Nikah valid.'
+  },
+  {
+    q: 'Is a Nikah Nama the same as a marriage certificate?',
+    a: 'No. The Nikah Nama records the marriage and its particulars. Registration is a separate statutory step. A computerised marriage certificate may later be obtained through the relevant local authority system. Translation or attestation can also be required for overseas use.'
+  },
+  {
+    q: 'Does NADRA directly register every marriage?',
+    a: 'It is more accurate to say that Muslim marriages are registered through the competent Nikah Registrar and local-authority framework. Computerised certificates may use NADRA-linked identity data, but the marriage-registration process itself should not be reduced to the phrase NADRA registration.'
+  },
+  {
+    q: 'How much does court marriage cost in Pakistan?',
+    a: 'The cost depends on the city, case and services required. Consultation, Nikah arrangements, registration, certified copies, computerised certificate assistance, translation, attestation and urgent handling may be separate items. Overseas or foreign-national cases can require additional work. A transparent quotation should state what is included.'
+  },
+  {
+    q: 'Can court marriage remain confidential?',
+    a: 'Consultations can be handled discreetly and personal information should be protected, but a lawfully registered marriage creates an official record. Confidentiality should therefore mean responsible handling of the case, not a promise that a registered marriage will leave no official trace.'
+  }
+];
 
 const Home = () => {
   const revealVariants = {
     hidden: { clipPath: 'inset(0 100% 0 0)' },
-    visible: {
-      clipPath: 'inset(0 0% 0 0)',
-      transition: { duration: 1.5, ease: "easeInOut" }
-    }
+    visible: { clipPath: 'inset(0 0% 0 0)', transition: { duration: 1.2, ease: 'easeInOut' } }
+  };
+
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqs.map((faq) => ({
+      '@type': 'Question',
+      name: faq.q,
+      acceptedAnswer: { '@type': 'Answer', text: faq.a }
+    }))
+  };
+
+  const legalServiceSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'LegalService',
+    name: 'Court Marriage Site',
+    url: 'https://courtmarriage.site/',
+    telephone: '+92 332 2908556',
+    areaServed: 'Pakistan',
+    serviceType: ['Court Marriage', 'Online Nikah', 'Nikah Nama Documentation', 'Marriage Registration Assistance'],
+    description: 'Legal assistance for court marriage, Online Nikah, Nikah Nama documentation and marriage registration in Pakistan.'
   };
 
   return (
-    <main>
-    <div className="bg-slate-950 text-slate-300 font-sans selection:bg-blue-500/30">
+    <main className="bg-slate-950 text-slate-300 font-sans selection:bg-blue-500/30">
+      <SEO
+        title="Court Marriage in Pakistan | Online Nikah Legal Services"
+        description="Court Marriage in Pakistan with legal guidance on consent, documents, Nikah Nama, registration, Online Nikah, fees and overseas cases. Updated 2026."
+        path="/"
+        schema={[legalServiceSchema, faqSchema]}
+      />
 
-      {/* 1. HERO SECTION (Alignment Fixed) */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 lg:pt-0">
         <div className="absolute top-0 -left-20 w-96 h-96 bg-blue-600/20 rounded-full blur-[120px]" />
-
         <div className="max-w-7xl mx-auto px-6 relative z-10 w-full grid lg:grid-cols-2 gap-12 items-center">
-
-          {/* Left Column: Text Content */}
           <div className="text-center lg:text-left">
-            {/* H1 Title */}
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-6xl font-black text-white leading-tight mb-8 mt-20 tracking-tighter">
-              <motion.span variants={revealVariants} initial="hidden" animate="visible" className="block pb-2 ">
-           <span className='text-white'>Court Marriage</span> 
-              </motion.span>
-              <motion.span
-                variants={revealVariants}
-                initial="hidden"
-                animate="visible"
-                transition={{ delay: 0.5 }}
-                className="text-transparent bg-clip-text  block pb-4"
-              >
-          <span className='text-blue-500'> & Online Nikkah Services in Karachi</span> 
-              </motion.span>
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-black text-white leading-tight mb-7 mt-20 tracking-tighter">
+              <motion.span variants={revealVariants} initial="hidden" animate="visible" className="block pb-2">Court Marriage in Pakistan</motion.span>
+              <motion.span variants={revealVariants} initial="hidden" animate="visible" transition={{ delay: 0.35 }} className="text-blue-500 block pb-3">& Online Nikah Services</motion.span>
             </h1>
 
-            {/* H2 Heading */}
-           <h2 className="text-2xl md:text-4xl font-bold mt-4 mb-6 leading-normal pb-2">
-  <motion.span 
-    variants={revealVariants} 
-    initial="hidden" 
-    animate="visible" 
-    transition={{ delay: 0.8 }} 
-    className="flex flex-wrap justify-center lg:justify-start gap-x-3 md:gap-x-4"
-  >
-    <span className="text-blue-400">Legal process for Court Marriage in Karachi </span>
+            <h2 className="text-2xl md:text-3xl font-bold mb-6 leading-normal text-blue-300">Legal guidance for Nikah, documentation and marriage registration</h2>
 
-  </motion.span>
-</h2>
+            <p className="text-base md:text-lg text-slate-400 mb-8 max-w-3xl mx-auto lg:mx-0 leading-relaxed">
+              Court Marriage Site provides legal information and professional assistance for <strong className="text-slate-200">court marriage in Pakistan</strong>, Online Nikah, Nikah Nama documentation and marriage registration. The service is designed for couples who want a lawful, discreet and properly documented process in Karachi, Islamabad, Rawalpindi and Punjab, including overseas and free-will marriage cases.
+            </p>
 
-            {/* H3 Heading */}
-            <h3 className="text-xl md:text-3xl mt-2 font-semibold text-white leading-normal pb-6">
-              <motion.span variants={revealVariants} initial="hidden" animate="visible" transition={{ delay: 1.1 }} className="block">
-                Same-Day Court Marriage and Nikah Registration services in Karachi
-              </motion.span>
-            </h3>
-
-            {/* Paragraph */}
-          <p className="text-base md:text-lg text-slate-400 mb-10 max-w-3xl mx-auto lg:mx-0 leading-relaxed">
-          <strong>Court Marriage & Online Nikah Services in Karachi, Islamabad, Rawalpindi, and Lahore</strong> offer 
-          discreet, lawful, and reliable solutions for couples seeking a smooth and legally recognized union. 
-          Backed by <strong>40+ years of legal experience</strong>, our team comprises member family lawyers of 
-          the <strong>Supreme Court Bar Association </strong>, the <strong>High Court Bar Association</strong>, 
-          and the <strong>Karachi Bar Association</strong>, ensuring trusted, court-defensible legal support. 
-          With expert guidance on court marriage fees and fully Shari’a-compliant online Nikah procedures, we provide 
-          clarity, confidentiality, and complete legal validity at every step.
-        </p>
-
-            {/* Buttons */}
             <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
-              <a href="tel:+923322908556" className="w-full sm:w-auto px-8 py-4 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded-xl shadow-lg transition-all text-center no-underline">
-                Call for Fee Details
-              </a>
+              <a href="tel:+923322908556" className="w-full sm:w-auto px-8 py-4 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded-xl shadow-lg transition-all text-center no-underline">Call for Case Review</a>
+              <a href="https://wa.me/923322908556" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto px-8 py-4 border border-slate-700 hover:border-blue-500 text-white font-bold rounded-xl transition-all text-center no-underline">WhatsApp Now</a>
             </div>
           </div>
 
-          {/* Right Column: Image (H1 ke barabar set kar di hai) */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1 }}
-            className="hidden lg:flex justify-center items-center"
-          >
-            <div className="rounded-[3rem] overflow-hidden border border-white/5 shadow-2xl relative group w-full max-w-lg mb-40">
-              <img
-                src={heroNikahImage}
-                alt="Court Marriage and Online Nikah in Pakistan"
-                className="w-full h-auto object-cover transform scale-105 group-hover:scale-100 transition-transform duration-1000 mb-40"
-             priority />
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.9 }} className="hidden lg:flex justify-center items-center">
+            <div className="rounded-[3rem] overflow-hidden border border-white/5 shadow-2xl relative group w-full max-w-lg">
+              <img src={heroNikahImage} alt="Court Marriage and Online Nikah legal services in Pakistan" className="w-full h-auto object-cover transform scale-105 group-hover:scale-100 transition-transform duration-1000" fetchPriority="high" />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-transparent to-transparent" />
             </div>
           </motion.div>
-
         </div>
       </section>
 
-      {/* 2. DETAILED INTRODUCTION */}
       <section className="py-24 bg-slate-900/30">
         <div className="max-w-6xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">Family Law & Marriage Experts</h2>
+          <div className="text-center mb-14">
+            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">Court Marriage in Pakistan: what the term really means</h2>
             <div className="w-24 h-1 bg-blue-600 mx-auto rounded-full" />
           </div>
-          <div className="grid md:grid-cols-2 gap-12 text-lg leading-relaxed text-slate-400">
+          <div className="space-y-6 text-lg leading-relaxed text-slate-400 max-w-5xl mx-auto">
             <p>
-              <strong>Court-MarriageSite</strong> has been established to provide reliable, lawful, and discreet solutions for individuals seeking <strong>Court Marriage</strong>, <strong>Online Marriage</strong>, and <strong>Online Nikah e Shari’a</strong>. Our approach combines religious understanding with statutory compliance, ensuring every matter is handled with care and legality.
+              The phrase <strong className="text-slate-200">court marriage in Pakistan</strong> is widely used, but it is often misunderstood. It usually describes a marriage chosen by the couple and completed with legal help, especially where the couple wants independent documentation, privacy or advice because their families do not agree. It does not normally mean that a judge conducts a wedding ceremony inside a courtroom. For a Muslim couple, the marriage itself remains a Nikah and must satisfy the applicable legal and religious requirements.
             </p>
             <p>
-              Whether you require documentation support like a <strong>Duplicate Nikah Nama</strong>, or are facing family disputes such as <strong>Divorce, Khula, or Child Custody</strong>, our platform connects you with experienced family law professionals who understand both Islamic principles and Pakistani law.
+              The legal work is mainly about getting the process right. The parties’ identity and age should be checked, free consent should be genuine, previous marital status should be clarified, the Nikah Nama should be completed accurately and the marriage should be registered through the competent system. Under the Muslim Family Laws Ordinance, 1961, Muslim marriages are required to be registered. That registration framework uses licensed Nikah Registrars and the relevant local authority rather than a generic national “court marriage office”.
+            </p>
+            <p>
+              The legal age for marriage should also be checked by jurisdiction. Pakistan does not have one safe age statement that should be copied onto every city page without review. Sindh and the Islamabad Capital Territory have legislation treating a male or female under eighteen as a child, while the current rule applicable in Punjab or another jurisdiction should be verified before a proposed marriage. This is why a reliable service should check the place and date of the marriage instead of relying on an old nationwide assumption.
+            </p>
+            <p>
+              Couples should also separate the marriage itself from any safety or protection issue. A couple marrying by choice does not automatically need court proceedings. If there are threats, coercion, confinement, harassment or a genuine risk of violence, however, the protection question may require separate legal advice. Marriage documents should not be used as a substitute for a proper safety assessment.
             </p>
           </div>
         </div>
       </section>
 
-      {/* 3. SERVICE DETAILS */}
       <section className="py-24 max-w-7xl mx-auto px-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+        <div className="text-center mb-14">
+          <h2 className="text-3xl md:text-4xl font-black text-white mb-5">Marriage legal services</h2>
+          <p className="text-slate-400 max-w-3xl mx-auto">Each service is handled as a separate legal and documentary task so the couple knows what is being arranged and what may still be required afterwards.</p>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="p-8 bg-slate-900 rounded-[2rem] border border-slate-800">
             <Scale className="text-blue-500 mb-4" size={40} />
-            <h3 className="text-2xl font-bold text-white mb-4">Court Marriage Process</h3>
-            <p className="text-slate-400 mb-4">Court marriage is a civil process recognized under Pakistani law that provides legal protection. Our services ensure lawful completion of all formalities, including affidavits, <strong>Nikah registration</strong>, and <strong>NADRA marriage certificates</strong>.</p>
-            <ul className="text-sm space-y-2 text-slate-500">
-              <li>• Full legal recognition and official documentation.</li>
-              <li>• Suitable for couples seeking enforceable legal rights.</li>
-              <li>• 100% confidential and discreet procedure.</li>
+            <h3 className="text-2xl font-bold text-white mb-4">Court Marriage Legal Assistance</h3>
+            <p className="text-slate-400 mb-5 leading-relaxed">Case review for legal eligibility, free consent, identity, previous marital status, Nikah arrangements, Nikah Nama completion and the appropriate local registration route.</p>
+            <ul className="space-y-3 text-slate-400 text-sm">
+              <li className="flex gap-2"><CheckCircle size={17} className="text-blue-500 shrink-0" /> Free-will marriage guidance</li>
+              <li className="flex gap-2"><CheckCircle size={17} className="text-blue-500 shrink-0" /> Nikah and documentation planning</li>
+              <li className="flex gap-2"><CheckCircle size={17} className="text-blue-500 shrink-0" /> Registration and certificate assistance</li>
             </ul>
           </div>
 
           <div className="p-8 bg-slate-900 rounded-[2rem] border border-slate-800">
             <Globe className="text-blue-500 mb-4" size={40} />
-            <h3 className="text-2xl font-bold text-white mb-4">Online Nikah e Shari’a</h3>
-            <p className="text-slate-400 mb-4">Ideal for overseas Pakistanis, our <strong>Online Nikah</strong> services allow couples to solemnize their marriage remotely while fully complying with Islamic principles (Ijab-o-Qabool, Witnesses, and Mahr).</p>
-            <ul className="text-sm space-y-2 text-slate-500">
-              <li>• Shari’a-compliant Nikah conducted by qualified Nikah Khawan.</li>
-              <li>• Internationally recognized documentation.</li>
-              <li>• Efficient and lawful religious union for distant couples.</li>
+            <h3 className="text-2xl font-bold text-white mb-4">Online Nikah & Overseas Cases</h3>
+            <p className="text-slate-400 mb-5 leading-relaxed">Remote and overseas Nikah matters are reviewed for identity, consent, witness arrangements, representation, documentation and intended foreign use before a process is proposed.</p>
+            <ul className="space-y-3 text-slate-400 text-sm">
+              <li className="flex gap-2"><CheckCircle size={17} className="text-blue-500 shrink-0" /> Overseas Pakistani coordination</li>
+              <li className="flex gap-2"><CheckCircle size={17} className="text-blue-500 shrink-0" /> Power of attorney and representation review</li>
+              <li className="flex gap-2"><CheckCircle size={17} className="text-blue-500 shrink-0" /> Translation and attestation guidance</li>
             </ul>
           </div>
         </div>
       </section>
 
-      {/* 4. URDU SECTION */}
-   {/* 4. URDU SECTION (Fixed Hierarchy & Contrast) */}
-<section className="py-24 bg-blue-600/5" dir="rtl">
-  <div className="max-w-7xl mx-auto px-6 text-right">
-    <h2 className="text-4xl font-black text-white mb-12">کورٹ میرج اور فیملی لا سروسز</h2>
-    <div className="grid md:grid-cols-3 gap-8">
-      <div className="bg-slate-900 p-8 rounded-2xl border-r-4 border-blue-600">
-        {/* h4 ko h3 kiya hierarchy ke liye */}
-        <h3 className="text-xl font-bold text-white mb-3 text-blue-400">عدالتی نکاح (Court Marriage)</h3>
-        <p className="text-slate-400 text-sm leading-relaxed">پاکستانی قانون کے تحت کورٹ میرج کا باقاعدہ طریقہ کار، جس میں مکمل قانونی تحفظ اور دستاویزات فراہم کی جاتی ہیں۔</p>
-      </div>
-      <div className="bg-slate-900 p-8 rounded-2xl border-r-4 border-blue-600">
-        <h3 className="text-xl font-bold text-white mb-3 text-blue-400">آن لائن نکاح (Online Nikah)</h3>
-        <p className="text-slate-400 text-sm leading-relaxed">بیرونِ ملک مقیم پاکستانیوں کے لیے شرعی اصولوں کے مطابق ایجاب و قبول اور نکاح رجسٹریشن کی سہولت۔</p>
-      </div>
-      <div className="bg-slate-900 p-8 rounded-2xl border-r-4 border-blue-600">
-        <h3 className="text-xl font-bold text-white mb-3 text-blue-400">نکاح رجسٹریشن</h3>
-        <p className="text-slate-400 text-sm leading-relaxed">نکاح نامہ، کمپیوٹرائزڈ میریج سرٹیفکیٹ، اور ڈپلیکیٹ نکاح نامہ کے حصول میں مکمل قانونی معاونت۔</p>
-      </div>
-    </div>
-  </div>
-</section>
+      <section className="py-24 bg-blue-600/5">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid lg:grid-cols-2 gap-14 items-start">
+            <div>
+              <Shield className="text-blue-500 mb-5" size={42} />
+              <h2 className="text-3xl md:text-4xl font-black text-white mb-6">Core legal checks before a court marriage</h2>
+              <div className="space-y-5 text-slate-400 leading-relaxed">
+                <p><strong className="text-white">Legal age and capacity:</strong> the current rule for the relevant province or territory must be checked. Identity documents should support the stated age and personal particulars.</p>
+                <p><strong className="text-white">Free consent:</strong> both parties should understand the marriage and agree voluntarily. A free-will affidavit, where used, is supporting documentation; it is not a substitute for genuine consent.</p>
+                <p><strong className="text-white">Previous marital status:</strong> a divorced, khula or widowed party may need documents establishing the legal position before a new Nikah is prepared.</p>
+                <p><strong className="text-white">Mahr and Nikah Nama:</strong> Mahr, witness particulars, addresses and any special conditions should be discussed and recorded carefully rather than left to assumptions.</p>
+              </div>
+            </div>
 
-      {/* 5. SERVICES LIST */}
-      <section className="py-24 max-w-7xl mx-auto px-6">
-        <h3 className="text-2xl font-bold text-white mb-12 text-center underline decoration-blue-500 underline-offset-8">Complete Marriage & Law Services</h3>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-xs md:text-sm">
-          {["Court Marriage in Lahore", "Court Marriage in Urdu", "Marriage in Islam", "Online Shadi in Pakistan", "Nikah Khawan in Karachi", "Nikah Khawan in Islamabad", "NADRA Marriage Certificate", "Divorce Certificate", "Duplicate Nikah Nama", "Child Custody Law", "Family Law Experts", "Khula Procedure"].map((item, idx) => (
-            <div key={idx} className="p-4 bg-slate-900/50 border border-slate-800 rounded-xl text-slate-500 hover:text-blue-400 transition-colors">
-              {item}
+            <div className="p-8 md:p-10 rounded-[2.5rem] bg-slate-900 border border-slate-800">
+              <FileText className="text-blue-500 mb-5" size={38} />
+              <h2 className="text-2xl md:text-3xl font-black text-white mb-6">Documents commonly reviewed</h2>
+              <div className="space-y-5">
+                {[
+                  ['CNIC / identity documents', 'Current and legible identity records for both parties.'],
+                  ['Witness particulars', 'Identity information for the witnesses required for the proposed Nikah.'],
+                  ['Previous-marriage records', 'Relevant divorce, khula, talaq-effectiveness or death documentation where applicable.'],
+                  ['Overseas documents', 'Passport, NICOP, visa, authority documents or attestation papers where the facts require them.']
+                ].map(([title, text]) => (
+                  <div key={title} className="flex gap-4">
+                    <CheckCircle className="text-blue-500 shrink-0 mt-1" size={20} />
+                    <div>
+                      <h3 className="text-white font-bold">{title}</h3>
+                      <p className="text-slate-500 text-sm mt-1">{text}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-24 max-w-6xl mx-auto px-6">
+        <h2 className="text-3xl md:text-4xl font-black text-white text-center mb-14">Court Marriage procedure in Pakistan</h2>
+        <div className="grid md:grid-cols-2 gap-6">
+          {[
+            ['1. Case review', 'Confirm the city, ages, identity, nationality, current marital status, attendance and any safety or overseas issues.'],
+            ['2. Document verification', 'Check names, dates of birth, CNIC or passport details and any documents relating to a previous marriage.'],
+            ['3. Nikah planning', 'Agree Mahr, witness arrangements, any special conditions and the practical structure of the Nikah.'],
+            ['4. Nikah Nama', 'Complete the form carefully so identity particulars, Mahr and agreed conditions are recorded consistently.'],
+            ['5. Registration', 'Use the competent Nikah Registrar and local-authority framework for the relevant jurisdiction.'],
+            ['6. Post-registration documents', 'Obtain certified copies or a computerised certificate and arrange translation or attestation if required.']
+          ].map(([title, text]) => (
+            <div key={title} className="p-7 rounded-2xl bg-slate-900/60 border border-slate-800">
+              <h3 className="text-xl font-bold text-white mb-3">{title}</h3>
+              <p className="text-slate-400 leading-relaxed">{text}</p>
             </div>
           ))}
         </div>
       </section>
 
-      {/* 6. FAQ SECTION */}
+      <section className="py-24 bg-slate-900/30">
+        <div className="max-w-6xl mx-auto px-6 grid lg:grid-cols-2 gap-14">
+          <div>
+            <Heart className="text-blue-500 mb-5" size={40} />
+            <h2 className="text-3xl font-black text-white mb-5">Online Nikah is not simply a video call</h2>
+            <div className="space-y-5 text-slate-400 leading-relaxed">
+              <p>Online Nikah is useful where one or both parties are abroad or unable to attend the same place. The case still needs a proper structure for consent, witnesses, Mahr, identity and any representative acting on behalf of a party.</p>
+              <p>Religious opinions can differ on some forms of remote participation. For that reason, a responsible Online Nikah service should identify the intended method and, where necessary, obtain guidance appropriate to the parties’ school of thought rather than claiming that every video-link Nikah is automatically valid.</p>
+              <p>Registration and foreign use are separate questions. A Nikah that is properly solemnised still needs the correct documentation and registration route. If the marriage will be used for immigration or abroad, translation, attestation and destination-specific requirements should be considered separately.</p>
+            </div>
+            <Link to="/online-nikah-navigating-the-digital-path-to-marriage" className="inline-block mt-7 text-blue-400 font-bold hover:text-blue-300">Read the complete Online Nikah guide →</Link>
+          </div>
+
+          <div>
+            <Users className="text-blue-500 mb-5" size={40} />
+            <h2 className="text-3xl font-black text-white mb-5">City-specific Court Marriage services</h2>
+            <p className="text-slate-400 leading-relaxed mb-7">Registration practice and marriage-age rules can vary by jurisdiction. Use the relevant city page for local guidance rather than applying one city’s assumptions everywhere.</p>
+            <div className="grid sm:grid-cols-2 gap-4">
+              {[
+                ['Karachi', '/services/court-marriage-karachi'],
+                ['Islamabad', '/services/court-marriage-islamabad'],
+                ['Rawalpindi', '/services/court-marriage-rawalpindi'],
+                ['Punjab', '/services/court-marriage-punjab']
+              ].map(([city, path]) => (
+                <Link key={city} to={path} className="p-5 rounded-2xl bg-slate-950 border border-slate-800 hover:border-blue-500/50 transition-colors no-underline">
+                  <MapPin className="text-blue-500 mb-3" size={20} />
+                  <span className="text-white font-bold">Court Marriage in {city}</span>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="py-24 max-w-4xl mx-auto px-6">
-        <h2 className="text-3xl font-bold text-white mb-12 text-center">Frequently Asked Questions</h2>
+        <h2 className="text-3xl md:text-4xl font-black text-white mb-5 text-center">Frequently asked questions</h2>
+        <p className="text-slate-500 text-center mb-12">These answers provide general information. Individual facts and local law can change the correct procedure.</p>
         <div className="space-y-4">
-          {[
-            { q: "What is the difference between Nikah and Marriage Registration?", a: "Nikah registration records the religious ceremony, while marriage registration provide formal legal and governmental documentation like the NADRA computerized certificate." },
-            { q: "Can we perform Online Nikah without physical presence?", a: "Yes, Online Nikah is valid under Shari'a as long as Ijab-o-Qabool, witnesses, and Mahr are properly arranged via digital communication." },
-            { q: "Is court marriage confidential in Pakistan?", a: "Yes, we prioritize the privacy and confidentiality of our clients, ensuring all legal steps are handled discreetly." },
-            { q: "What are the requirements for a duplicate Nikah Nama?", a: "It typically requires an application to the relevant Union Council along with identification and proof of the original marriage." }
-          ].map((faq, i) => (
-            <details key={i} className="group p-6 bg-slate-900 border border-slate-800 rounded-2xl">
-              <summary className="text-white font-bold cursor-pointer list-none flex justify-between items-center">
-                {faq.q} <span className="text-blue-500 group-open:rotate-180 transition-transform">+</span>
-              </summary>
-              <p className="mt-4 text-slate-500 text-sm leading-relaxed">{faq.a}</p>
+          {faqs.map((faq, index) => (
+            <details key={index} className="group p-6 bg-slate-900 border border-slate-800 rounded-2xl">
+              <summary className="text-white font-bold cursor-pointer list-none flex justify-between gap-4">{faq.q}<span className="text-blue-500">+</span></summary>
+              <p className="mt-4 text-slate-400 leading-relaxed">{faq.a}</p>
             </details>
           ))}
         </div>
       </section>
 
-      {/* 7. CONTACT & OFFICES */}
       <section className="py-24 bg-slate-950">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="p-8 bg-slate-900 rounded-3xl border border-slate-800">
-              <MapPin className="text-blue-500 mb-4" />
-              <h4 className="text-white font-bold">Karachi Head Office</h4>
-              <p className="text-xs text-slate-500 mt-2">Supreme Corner Apartments, Johar Chowrangi, Block 18, Gulistan-e-Johar</p>
-              <p className="text-blue-400 font-bold mt-4">+92 331 6644789</p>
-            </div>
-            <div className="p-8 bg-slate-900 rounded-3xl border border-slate-800">
-              <MapPin className="text-blue-500 mb-4" />
-              <h4 className="text-white font-bold">Islamabad Office</h4>
-              <p className="text-xs text-slate-500 mt-2">Laraib Plaza, Karachi Company, Near TCS Express Centre, G-9 Markaz, Mangla Road</p>
-              <p className="text-blue-400 font-bold mt-4">+92 302 6644789</p>
-            </div>
-            <div className="p-8 bg-slate-900 rounded-3xl border border-slate-800">
-              <MapPin className="text-blue-500 mb-4" />
-              <h4 className="text-white font-bold">Lahore Office</h4>
-              <p className="text-xs text-slate-500 mt-2">1st Floor, Al-Mairaj Arcade, Near Surayya Azeem Trust Hospital, Chauburji Chowk.</p>
-              <p className="text-blue-400 font-bold mt-4">+92 316 6644789</p>
-            </div>
+        <div className="max-w-5xl mx-auto px-6 text-center p-12 rounded-[3rem] border border-blue-500/20 bg-gradient-to-br from-blue-600/10 to-slate-900">
+          <h2 className="text-3xl md:text-4xl font-black text-white mb-5">Discuss your Court Marriage case confidentially</h2>
+          <p className="text-slate-400 max-w-3xl mx-auto mb-8 leading-relaxed">Share your city, ages, nationality, marital status and whether both parties can attend. The legal team can then identify the appropriate Nikah, registration and documentation route before giving a fee or timeline.</p>
+          <div className="flex flex-col sm:flex-row justify-center gap-4">
+            <a href="tel:+923322908556" className="px-8 py-4 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded-xl no-underline">Call +92 332 2908556</a>
+            <Link to="/contact" className="px-8 py-4 border border-slate-700 hover:border-blue-500 text-white font-bold rounded-xl no-underline">Contact Legal Team</Link>
           </div>
         </div>
       </section>
-    </div>
     </main>
   );
 };
