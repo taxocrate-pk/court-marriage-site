@@ -24,7 +24,6 @@ jobs:
           from pathlib import Path
           import re
 
-          allowed = {'.js', '.jsx', '.ts', '.tsx', '.html', '.json', '.xml', '.md', '.yml', '.yaml'}
           replacements = {
               '+92 332 2908556': '+92 333 1127834',
               '+923322908556': '+923331127834',
@@ -34,18 +33,22 @@ jobs:
               '03322908556': '03331127834',
           }
 
+          targets = []
+          targets.extend(p for p in Path('src').rglob('*') if p.is_file())
+          targets.extend(p for p in Path('public').rglob('*') if p.is_file())
+          if Path('index.html').exists():
+              targets.append(Path('index.html'))
+
           changed = []
-          for path in Path('.').rglob('*'):
-              if not path.is_file() or path.suffix.lower() not in allowed:
+          for path in targets:
+              try:
+                  text = path.read_text(encoding='utf-8')
+              except UnicodeDecodeError:
                   continue
-              if '.git' in path.parts or 'node_modules' in path.parts:
-                  continue
-              text = path.read_text(encoding='utf-8')
               original = text
               for old, new in replacements.items():
                   text = text.replace(old, new)
 
-              # All structured-data telephone properties use the approved universal number.
               if path.suffix.lower() in {'.js', '.jsx', '.ts', '.tsx'}:
                   text = re.sub(r"telephone:\s*(?:displayPhone|'[^']*'|\"[^\"]*\")", "telephone: '+92 333 1127834'", text)
 
@@ -53,7 +56,6 @@ jobs:
                   path.write_text(text, encoding='utf-8')
                   changed.append(str(path))
 
-          # Court Marriage shared layout: keep city phone for Call buttons, but force universal WhatsApp.
           service = Path('src/components/Pages/Services/ServicesLayout.jsx')
           if service.exists():
               text = service.read_text(encoding='utf-8')
@@ -65,7 +67,6 @@ jobs:
                   if str(service) not in changed:
                       changed.append(str(service))
 
-          # Online Nikah shared city layout: city phone stays for Call buttons, WhatsApp/schema become universal.
           online = Path('src/components/Pages/OnlineNikahCityLayout.jsx')
           if online.exists():
               text = online.read_text(encoding='utf-8')
@@ -81,12 +82,9 @@ jobs:
           for item in changed:
               print('-', item)
 
-          # Fail if the obsolete universal number remains anywhere in source/public/index files.
           obsolete = ['+92 332 2908556', '+923322908556', '923322908556', '0332 2908556', '0332-2908556', '03322908556']
           leftovers = []
-          for path in list(Path('src').rglob('*')) + list(Path('public').rglob('*')) + [Path('index.html')]:
-              if not path.is_file():
-                  continue
+          for path in targets:
               try:
                   text = path.read_text(encoding='utf-8')
               except UnicodeDecodeError:
@@ -100,12 +98,12 @@ jobs:
 
       - name: Commit cleanup
         run: |
-          if git diff --quiet; then
+          if git diff --quiet -- src public index.html; then
             echo "No changes needed"
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -A
+          git add src public index.html
           git commit -m "Use 0333 1127834 as universal WhatsApp number"
           git push
