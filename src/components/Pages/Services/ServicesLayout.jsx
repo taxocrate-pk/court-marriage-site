@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { CheckCircle2, FileText, HeartHandshake, MapPin, MessageCircle, Scale, ShieldCheck } from 'lucide-react';
 import SEO from '../../SEO.jsx';
+import WeddingHeroImage from '../../WeddingHeroImage.jsx';
 
 const BASE_URL = 'https://courtmarriage.site';
 
@@ -115,7 +116,7 @@ const ServiceLayout = ({
       <div className="absolute bottom-0 -right-20 w-96 h-96 bg-blue-900/10 rounded-full blur-[120px]" />
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
-        <section className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+        <section className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
           <div className="max-w-2xl">
             <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="text-blue-500 font-bold uppercase tracking-widest text-sm mb-4">
               Marriage Legal Services in {city}
@@ -157,32 +158,41 @@ const ServiceLayout = ({
             </div>
           </div>
 
-          <motion.aside initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.35 }} className="lg:sticky lg:top-28 bg-gradient-to-br from-slate-900 to-slate-950 p-8 md:p-10 rounded-[2.5rem] border border-slate-800 shadow-2xl">
-            <FileText className="text-blue-500 mb-5" size={38} />
-            <h2 className="text-2xl font-bold text-white mb-6">Documents commonly reviewed</h2>
-            <div className="space-y-6">
-              <div>
-                <h3 className="text-white font-bold">Bride and groom</h3>
-                <p className="text-sm text-slate-400 mt-1">CNIC or other valid identity document, current particulars and contact information.</p>
+          <div className="space-y-6 lg:sticky lg:top-28">
+            <motion.div initial={{ opacity: 0, scale: 0.97 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: 0.2 }}>
+              <WeddingHeroImage
+                alt={`Wedding couple for Court Marriage services in ${city}`}
+                priority
+              />
+            </motion.div>
+
+            <motion.aside initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.35 }} className="bg-gradient-to-br from-slate-900 to-slate-950 p-8 md:p-10 rounded-[2.5rem] border border-slate-800 shadow-2xl">
+              <FileText className="text-blue-500 mb-5" size={38} />
+              <h2 className="text-2xl font-bold text-white mb-6">Documents commonly reviewed</h2>
+              <div className="space-y-6">
+                <div>
+                  <h3 className="text-white font-bold">Bride and groom</h3>
+                  <p className="text-sm text-slate-400 mt-1">CNIC or other valid identity document, current particulars and contact information.</p>
+                </div>
+                <div>
+                  <h3 className="text-white font-bold">Previous marital status</h3>
+                  <p className="text-sm text-slate-400 mt-1">Where applicable, relevant divorce, khula, talaq-effectiveness or death documentation should be reviewed.</p>
+                </div>
+                <div>
+                  <h3 className="text-white font-bold">Witness information</h3>
+                  <p className="text-sm text-slate-400 mt-1">Identity particulars for the witnesses required for the proposed Nikah arrangements.</p>
+                </div>
+                <div>
+                  <h3 className="text-white font-bold">Overseas or foreign cases</h3>
+                  <p className="text-sm text-slate-400 mt-1">Passport, visa, NICOP, power of attorney or consular documents may become relevant depending on the facts.</p>
+                </div>
               </div>
-              <div>
-                <h3 className="text-white font-bold">Previous marital status</h3>
-                <p className="text-sm text-slate-400 mt-1">Where applicable, relevant divorce, khula, talaq-effectiveness or death documentation should be reviewed.</p>
-              </div>
-              <div>
-                <h3 className="text-white font-bold">Witness information</h3>
-                <p className="text-sm text-slate-400 mt-1">Identity particulars for the witnesses required for the proposed Nikah arrangements.</p>
-              </div>
-              <div>
-                <h3 className="text-white font-bold">Overseas or foreign cases</h3>
-                <p className="text-sm text-slate-400 mt-1">Passport, visa, NICOP, power of attorney or consular documents may become relevant depending on the facts.</p>
-              </div>
-            </div>
-            <a href={waUrl} target="_blank" rel="noopener noreferrer" className="w-full mt-9 py-4 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded-2xl transition-all flex items-center justify-center gap-2 no-underline">
-              <HeartHandshake size={19} /> Discuss Your Case
-            </a>
-            <p className="text-xs text-slate-500 mt-5 leading-relaxed">Document requirements vary by nationality, marital history, registration jurisdiction and intended overseas use. A case review should come before any fixed promise.</p>
-          </motion.aside>
+              <a href={waUrl} target="_blank" rel="noopener noreferrer" className="w-full mt-9 py-4 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded-2xl transition-all flex items-center justify-center gap-2 no-underline">
+                <HeartHandshake size={19} /> Discuss Your Case
+              </a>
+              <p className="text-xs text-slate-500 mt-5 leading-relaxed">Document requirements vary by nationality, marital history, registration jurisdiction and intended overseas use. A case review should come before any fixed promise.</p>
+            </motion.aside>
+          </div>
         </section>
 
         <section className="py-24">
