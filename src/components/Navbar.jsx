@@ -15,9 +15,10 @@ const Navbar = () => {
 
   const courtMarriagePages = [
     { name: 'Court Marriage Karachi', path: '/services/court-marriage-karachi' },
+    { name: 'Court Marriage Lahore', path: '/services/court-marriage-lahore' },
     { name: 'Court Marriage Islamabad', path: '/services/court-marriage-islamabad' },
     { name: 'Court Marriage Rawalpindi', path: '/services/court-marriage-rawalpindi' },
-    { name: 'Court Marriage Punjab', path: '/services/court-marriage-punjab' },
+    { name: 'Court Marriage Faisalabad', path: '/services/court-marriage-faisalabad' },
   ];
 
   const onlineNikahPages = [
