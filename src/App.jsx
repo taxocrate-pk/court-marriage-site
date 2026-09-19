@@ -6,6 +6,10 @@ import Home from './components/Pages/Home.jsx';
 import Procedure from './components/Pages/Procedure.jsx';
 import Contact from './components/Pages/Contact.jsx';
 import OnlineNikah from './components/Pages/OnlineNikkah.jsx';
+import OnlineNikahKarachi from './components/Pages/OnlineNikahKarachi.jsx';
+import OnlineNikahLahore from './components/Pages/OnlineNikahLahore.jsx';
+import OnlineNikahIslamabad from './components/Pages/OnlineNikahIslamabad.jsx';
+import OnlineNikahRawalpindi from './components/Pages/OnlineNikahRawalpindi.jsx';
 import AboutUs from './components/AboutUs.jsx';
 import PrivacyPolicy from './components/Pages/PrivacyPolicy.jsx';
 import TermsOfService from './components/Pages/TermsOfService.jsx';
@@ -23,6 +27,10 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/procedure" element={<Procedure />} />
         <Route path="/online-nikah-navigating-the-digital-path-to-marriage" element={<OnlineNikah />} />
+        <Route path="/online-nikah-karachi" element={<OnlineNikahKarachi />} />
+        <Route path="/online-nikah-lahore" element={<OnlineNikahLahore />} />
+        <Route path="/online-nikah-islamabad" element={<OnlineNikahIslamabad />} />
+        <Route path="/online-nikah-rawalpindi" element={<OnlineNikahRawalpindi />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/about-us" element={<AboutUs />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
