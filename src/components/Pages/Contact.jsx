@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router';
 import { CheckCircle2, MapPin, MessageCircle, Phone, ShieldCheck } from 'lucide-react';
 import SEO from '../SEO.jsx';
+import WeddingHeroImage from '../WeddingHeroImage.jsx';
 
 export default function Contact() {
   const [form, setForm] = useState({ name: '', phone: '', city: '', service: 'Court Marriage', message: '' });
@@ -45,16 +46,23 @@ export default function Contact() {
       <div className="absolute bottom-0 -right-20 w-96 h-96 bg-blue-900/10 rounded-full blur-[120px]" />
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
-        <header className="text-center max-w-4xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-blue-500/30 bg-blue-500/10 text-blue-400 text-xs font-bold uppercase tracking-widest mb-6">
-            <ShieldCheck size={15} /> Confidential Case Review
+        <header className="grid lg:grid-cols-2 gap-10 lg:gap-14 items-center mb-16">
+          <div className="text-center lg:text-left">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-blue-500/30 bg-blue-500/10 text-blue-400 text-xs font-bold uppercase tracking-widest mb-6">
+              <ShieldCheck size={15} /> Confidential Case Review
+            </div>
+            <h1 className="text-4xl md:text-6xl font-black text-white tracking-tighter mb-6">
+              Contact Our <span className="text-blue-500">Marriage Legal Team</span>
+            </h1>
+            <p className="text-lg text-slate-400 leading-relaxed">
+              Contact Court Marriage Site for guidance on court marriage, Online Nikah, Nikah Nama documentation and marriage registration. For a useful first review, tell us the city, ages, nationality, current marital status and whether both parties can attend.
+            </p>
           </div>
-          <h1 className="text-4xl md:text-6xl font-black text-white tracking-tighter mb-6">
-            Contact Our <span className="text-blue-500">Marriage Legal Team</span>
-          </h1>
-          <p className="text-lg text-slate-400 leading-relaxed">
-            Contact Court Marriage Site for guidance on court marriage, Online Nikah, Nikah Nama documentation and marriage registration. For a useful first review, tell us the city, ages, nationality, current marital status and whether both parties can attend.
-          </p>
+
+          <WeddingHeroImage
+            alt="Wedding couple for Court Marriage and Online Nikah consultation"
+            priority
+          />
         </header>
 
         <section className="grid lg:grid-cols-[1.1fr_0.9fr] gap-10 items-start mb-24">
