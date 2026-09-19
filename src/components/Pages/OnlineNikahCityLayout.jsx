@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router';
 import { CheckCircle2, FileText, Globe2, MapPin, MessageCircle, Scale, ShieldCheck, Users } from 'lucide-react';
 import SEO from '../SEO.jsx';
+import WeddingHeroImage from '../WeddingHeroImage.jsx';
 
 const BASE_URL = 'https://courtmarriage.site';
 
@@ -100,7 +101,7 @@ export default function OnlineNikahCityLayout({
         <div className="absolute top-0 -left-20 w-96 h-96 bg-blue-600/10 rounded-full blur-[120px]" />
         <div className="absolute top-40 right-0 w-80 h-80 bg-blue-900/10 rounded-full blur-[120px]" />
 
-        <div className="max-w-7xl mx-auto px-6 relative z-10 grid lg:grid-cols-[1.2fr_0.8fr] gap-12 items-start">
+        <div className="max-w-7xl mx-auto px-6 relative z-10 grid lg:grid-cols-[1.2fr_0.8fr] gap-10 lg:gap-12 items-start">
           <div>
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-blue-500/20 bg-blue-500/5 text-blue-400 text-xs font-bold uppercase tracking-widest mb-6">
               <MapPin size={14} /> Online Nikah Services in {city}
@@ -120,18 +121,25 @@ export default function OnlineNikahCityLayout({
             </div>
           </div>
 
-          <div className="bg-gradient-to-br from-slate-900 to-slate-950 rounded-[2rem] border border-slate-800 p-7 md:p-9 shadow-2xl lg:sticky lg:top-28">
-            <ShieldCheck className="text-blue-500 mb-5" size={34} />
-            <h2 className="text-2xl font-bold text-white mb-4">Case Review Before the Nikah</h2>
-            <p className="text-slate-400 leading-relaxed mb-6">
-              Online Nikah cases should be structured around the actual facts, not a generic promise. We review identity, consent, witnesses, marital status, local registration requirements and any overseas element before recommending the practical route.
-            </p>
-            <div className="space-y-3 text-sm">
-              {['Confidential consultation', 'Document checklist', 'Nikah Nama guidance', 'Registration assistance', 'Overseas-case review'].map((item) => (
-                <div key={item} className="flex items-center gap-3 text-slate-300">
-                  <CheckCircle2 size={17} className="text-blue-500 shrink-0" /> {item}
-                </div>
-              ))}
+          <div className="space-y-6 lg:sticky lg:top-28">
+            <WeddingHeroImage
+              alt={`Wedding couple for Online Nikah services in ${city}`}
+              priority
+            />
+
+            <div className="bg-gradient-to-br from-slate-900 to-slate-950 rounded-[2rem] border border-slate-800 p-7 md:p-9 shadow-2xl">
+              <ShieldCheck className="text-blue-500 mb-5" size={34} />
+              <h2 className="text-2xl font-bold text-white mb-4">Case Review Before the Nikah</h2>
+              <p className="text-slate-400 leading-relaxed mb-6">
+                Online Nikah cases should be structured around the actual facts, not a generic promise. We review identity, consent, witnesses, marital status, local registration requirements and any overseas element before recommending the practical route.
+              </p>
+              <div className="space-y-3 text-sm">
+                {['Confidential consultation', 'Document checklist', 'Nikah Nama guidance', 'Registration assistance', 'Overseas-case review'].map((item) => (
+                  <div key={item} className="flex items-center gap-3 text-slate-300">
+                    <CheckCircle2 size={17} className="text-blue-500 shrink-0" /> {item}
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
