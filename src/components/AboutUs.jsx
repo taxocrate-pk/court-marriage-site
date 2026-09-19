@@ -3,6 +3,7 @@ import { Link } from 'react-router';
 import { motion } from 'framer-motion';
 import { Award, CheckCircle2, Globe, MapPin, Scale, ShieldCheck } from 'lucide-react';
 import SEO from './SEO.jsx';
+import WeddingHeroImage from './WeddingHeroImage.jsx';
 
 const standards = [
   {
@@ -57,16 +58,23 @@ const AboutUs = () => {
       <div className="absolute bottom-0 right-0 w-96 h-96 bg-blue-900/10 rounded-full blur-[120px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
-        <header className="text-center mb-24 max-w-5xl mx-auto">
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="inline-block px-4 py-1 rounded-full border border-blue-500/30 bg-blue-500/10 text-blue-400 text-xs font-bold uppercase tracking-widest mb-6">
-            Professional Marriage Legal Services
-          </motion.div>
-          <h1 className="text-4xl md:text-6xl font-black text-white mb-8 tracking-tighter">
-            About <span className="text-blue-500">Court Marriage Site</span>
-          </h1>
-          <p className="max-w-4xl mx-auto text-lg md:text-xl text-slate-400 leading-relaxed">
-            Court Marriage Site is a Pakistan-focused legal information and professional-services platform for <strong className="text-slate-200">court marriage</strong>, <strong className="text-slate-200">Online Nikah</strong>, Nikah Nama documentation and marriage registration. Our objective is simple: explain the process accurately, identify the correct legal route for the particular couple and avoid the exaggerated promises that often surround marriage-service advertising.
-          </p>
+        <header className="grid lg:grid-cols-2 gap-10 lg:gap-14 items-center mb-24">
+          <div className="text-center lg:text-left">
+            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="inline-block px-4 py-1 rounded-full border border-blue-500/30 bg-blue-500/10 text-blue-400 text-xs font-bold uppercase tracking-widest mb-6">
+              Professional Marriage Legal Services
+            </motion.div>
+            <h1 className="text-4xl md:text-6xl font-black text-white mb-8 tracking-tighter">
+              About <span className="text-blue-500">Court Marriage Site</span>
+            </h1>
+            <p className="text-lg md:text-xl text-slate-400 leading-relaxed">
+              Court Marriage Site is a Pakistan-focused legal information and professional-services platform for <strong className="text-slate-200">court marriage</strong>, <strong className="text-slate-200">Online Nikah</strong>, Nikah Nama documentation and marriage registration. Our objective is simple: explain the process accurately, identify the correct legal route for the particular couple and avoid the exaggerated promises that often surround marriage-service advertising.
+            </p>
+          </div>
+
+          <WeddingHeroImage
+            alt="Wedding couple representing Court Marriage Site legal services"
+            priority
+          />
         </header>
 
         <section className="grid md:grid-cols-2 gap-12 mb-28 items-start">
