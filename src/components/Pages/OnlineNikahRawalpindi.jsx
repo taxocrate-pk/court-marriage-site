@@ -19,8 +19,8 @@ export default function OnlineNikahRawalpindi() {
     <OnlineNikahCityLayout
       city="Rawalpindi"
       path="/online-nikah-rawalpindi"
-      phone="+923331127831"
-      displayPhone="+92 333 1127831"
+      phone="+923332316871"
+      displayPhone="+92 333 2316871"
       intro="Online Nikah in Rawalpindi can help couples who are in different cities or countries complete their marriage with a structured legal and documentation process. We focus on consent, witnesses, accurate Nikah Nama particulars, the appropriate Rawalpindi-side registration route and any overseas requirements instead of treating a remote ceremony as the end of the legal process."
       localOverview={[
         'Rawalpindi Online Nikah cases commonly involve one party living in Islamabad, another district of Punjab or abroad, while family and documentation arrangements remain connected with Rawalpindi. Because the twin cities have different administrative jurisdictions, it is important not to assume that an Islamabad registration route automatically applies to a Rawalpindi matter.',

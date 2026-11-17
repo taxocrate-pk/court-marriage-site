@@ -22,7 +22,7 @@ export default function Contact() {
       `Service: ${form.service}`,
       `Details: ${form.message || 'Not provided'}`
     ].join('\n');
-    window.open(`https://wa.me/923331127834?text=${encodeURIComponent(message)}`, '_blank', 'noopener,noreferrer');
+    window.open(`https://wa.me/923332316871?text=${encodeURIComponent(message)}`, '_blank', 'noopener,noreferrer');
   };
 
   const contactSchema = {
@@ -114,7 +114,7 @@ export default function Contact() {
             <div className="p-7 rounded-[2rem] bg-slate-900 border border-slate-800">
               <Phone className="text-blue-500 mb-4" size={32} />
               <h2 className="text-2xl font-black text-white mb-4">Direct contact</h2>
-              <a href="tel:+923331127834" className="text-blue-400 font-bold text-lg no-underline hover:text-blue-300">+92 333 1127834</a>
+              <a href="tel:+923332316871" className="text-blue-400 font-bold text-lg no-underline hover:text-blue-300">+92 333 2316871</a>
               <p className="text-slate-500 text-sm mt-3 leading-relaxed">General Court Marriage Site helpline for initial enquiries and WhatsApp case intake.</p>
             </div>
 
@@ -128,9 +128,9 @@ export default function Contact() {
             <div className="p-7 rounded-[2rem] bg-blue-600/10 border border-blue-500/20">
               <h2 className="text-xl font-black text-white mb-4">City-specific numbers</h2>
               <div className="space-y-3 text-sm">
-                <p className="flex justify-between gap-3"><span className="text-slate-400">Islamabad</span><a className="text-blue-400 font-bold" href="tel:+923331127836">+92 333 1127836</a></p>
-                <p className="flex justify-between gap-3"><span className="text-slate-400">Rawalpindi</span><a className="text-blue-400 font-bold" href="tel:+923331127831">+92 333 1127831</a></p>
-                <p className="flex justify-between gap-3"><span className="text-slate-400">Lahore</span><a className="text-blue-400 font-bold" href="tel:+923331127835">+92 333 1127835</a></p>
+                <p className="flex justify-between gap-3"><span className="text-slate-400">Islamabad</span><a className="text-blue-400 font-bold" href="tel:+923332316871">+92 333 2316871</a></p>
+                <p className="flex justify-between gap-3"><span className="text-slate-400">Rawalpindi</span><a className="text-blue-400 font-bold" href="tel:+923332316871">+92 333 2316871</a></p>
+                <p className="flex justify-between gap-3"><span className="text-slate-400">Lahore</span><a className="text-blue-400 font-bold" href="tel:+923332316871">+92 333 2316871</a></p>
               </div>
             </div>
           </aside>

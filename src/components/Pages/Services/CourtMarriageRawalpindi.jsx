@@ -50,8 +50,8 @@ const CourtMarriageRawalpindi = () => (
     metaTitle="Court Marriage in Rawalpindi | Legal Nikah Guidance"
     metaDescription="Court Marriage in Rawalpindi with guidance on consent, documents, Nikah Nama, registration, fees, timelines and overseas cases. Updated 2026."
     description="Court Marriage in Rawalpindi should begin with a proper legal and documentary review, not a generic promise of same-day processing. We focus on identity, free consent, the marriage-age rule currently applicable in Punjab, prior marital status, accurate Nikah Nama completion and the correct local registration route. Overseas and family-opposition cases receive separate review before any fee or timeline is finalised."
-    phone="+923331127831"
-    displayPhone="+92 333 1127831"
+    phone="+923332316871"
+    displayPhone="+92 333 2316871"
     areas={['Saddar', 'Satellite Town', 'Chaklala', 'Bahria Town', 'Rawalpindi Cantonment', 'Rawalpindi City', 'Taxila', 'Murree District']}
     localPlanning="Rawalpindi is closely connected with Islamabad, but the two are different legal and administrative jurisdictions. A Rawalpindi marriage file should therefore be assessed under the law and registration practice applicable in Punjab rather than automatically treated as an Islamabad case. Residence, identity documents, previous marital status and the intended registration location should be confirmed before the Nikah Nama is prepared."
     localRegistration="The registration route in Rawalpindi depends on the competent Nikah Registrar and local authority for the relevant area. Couples living in cantonment, municipal or surrounding district areas should not assume that one office handles every registration. The registered Nikah Nama, certified copies and any later computerised certificate should be treated as separate documentary stages."
