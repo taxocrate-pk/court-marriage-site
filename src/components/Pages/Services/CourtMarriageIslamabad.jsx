@@ -50,8 +50,8 @@ const CourtMarriageIslamabad = () => (
     metaTitle="Court Marriage in Islamabad | Legal Nikah Assistance"
     metaDescription="Court Marriage in Islamabad with guidance on legal age, consent, Nikah Nama, registration, documents, fees and overseas cases. Updated 2026."
     description="Court Marriage in Islamabad should be handled as a complete legal-documentary process rather than as a quick courtroom formality. We focus on lawful age, genuine consent, correct identity and marital-status records, careful Nikah Nama completion and the proper registration route for the Islamabad Capital Territory. Overseas, foreign-national and family-opposition cases are reviewed individually before any timeline is promised."
-    phone="+923331127836"
-    displayPhone="+92 333 1127836"
+    phone="923332316871"
+    displayPhone="+92 333 2316871"
     areas={['G-9', 'G-10', 'G-11', 'F-8', 'F-10', 'F-11', 'I-8', 'Islamabad Capital Territory']}
     localPlanning="Islamabad cases should be planned with the Capital Territory’s current legal framework in mind. The Islamabad Capital Territory Child Marriage Restraint Act, 2025 sets eighteen as the threshold below which a male or female is treated as a child. Residence, identity particulars, prior marital status and the intended place of registration should all be checked before the Nikah Nama is prepared."
     localRegistration="Marriage registration in Islamabad should be handled through the competent Nikah Registrar and local registration framework for the relevant area. Couples should not assume that a generic ‘NADRA registration’ label identifies the whole process. The registered Nikah Nama and any later computerised certificate serve different documentary functions, and overseas use may require additional attestation or translation."

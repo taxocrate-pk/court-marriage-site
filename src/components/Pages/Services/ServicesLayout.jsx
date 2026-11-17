@@ -21,7 +21,7 @@ const ServiceLayout = ({
   officeAddress,
   faqs = []
 }) => {
-  const waNumber = '923331127834';
+  const waNumber = '923332316871';
   const waMessage = encodeURIComponent(`Assalam-o-Alaikum, mujhe Court Marriage in ${city} ke process, documents aur fee ke bare mein maloomat chahiye.`);
   const waUrl = `https://wa.me/${waNumber}?text=${waMessage}`;
 
@@ -91,7 +91,7 @@ const ServiceLayout = ({
     url: `${BASE_URL}${path}`,
     areaServed: city,
     serviceType: `Court Marriage legal assistance in ${city}`,
-    telephone: '+92 333 1127834',
+    telephone: '+92 333 2316871',
     description: metaDescription,
     ...(officeAddress ? {
       address: {

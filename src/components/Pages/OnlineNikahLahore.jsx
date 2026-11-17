@@ -19,8 +19,8 @@ export default function OnlineNikahLahore() {
     <OnlineNikahCityLayout
       city="Lahore"
       path="/online-nikah-lahore"
-      phone="+923331127835"
-      displayPhone="+92 333 1127835"
+      phone="923332316871"
+      displayPhone="+92 333 2316871"
       intro="Online Nikah in Lahore is useful for couples who are in different cities or countries, but the process should still be treated as a complete marriage matter involving consent, witnesses, accurate Nikah Nama particulars and the correct registration route. Our assistance is focused on legal clarity, documentation and practical coordination rather than blanket claims about instant completion."
       localOverview={[
         'Lahore Online Nikah matters frequently involve one party residing abroad, students or professionals living in another Pakistani city, or families that want the Nikah completed before a later in-person event. These cases benefit from advance document review so that the ceremony and the later official record remain consistent.',

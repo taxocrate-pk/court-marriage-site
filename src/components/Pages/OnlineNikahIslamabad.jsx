@@ -19,8 +19,8 @@ export default function OnlineNikahIslamabad() {
     <OnlineNikahCityLayout
       city="Islamabad"
       path="/online-nikah-islamabad"
-      phone="+923331127836"
-      displayPhone="+92 333 1127836"
+      phone="923332316871"
+      displayPhone="+92 333 2316871"
       intro="Online Nikah in Islamabad is often used by couples who are in different cities or countries, including overseas Pakistanis and foreign-linked families. The process should be planned around legal capacity, consent, witnesses, accurate Nikah Nama particulars and the correct Islamabad Capital Territory registration route rather than a generic promise that a video ceremony alone completes every legal step."
       localOverview={[
         'Islamabad Online Nikah enquiries frequently involve one party living abroad, government or diplomatic families, professionals posted outside the capital, or couples who want the Nikah completed before they can attend the same place. These matters are easier to manage when identity and marital-status documents are reviewed before the ceremony is scheduled.',
