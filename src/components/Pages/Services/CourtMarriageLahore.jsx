@@ -50,7 +50,7 @@ const CourtMarriageLahore = () => (
     metaTitle="Court Marriage in Lahore | Legal Nikah & Registration"
     metaDescription="Court Marriage in Lahore with legal guidance on age 18+, free consent, documents, Nikah Nama, registration, fees and overseas marriage cases."
     description="Court Marriage in Lahore should begin with a proper legal and documentary review. Under the Punjab Child Marriage Restraint Act, 2026, both parties must be at least eighteen years old. Identity, free consent, previous marital status, witness arrangements, Mahr and the intended Lahore registration jurisdiction should be checked before the Nikah Nama is finalised."
-    phone="923332316871"
+    phone="+923332316871"
     displayPhone="+92 333 2316871"
     areas={['Lahore District', 'Gulberg', 'Johar Town', 'Model Town', 'DHA Lahore', 'Cantt', 'Wapda Town', 'Bahria Town Lahore']}
     localPlanning="A Lahore court marriage file should identify the exact local jurisdiction before the ceremony is arranged. The couple’s CNIC or passport details, ages, marital status, Mahr, witnesses and any overseas element should be reviewed together. This reduces the risk of preparing a Nikah Nama that later conflicts with registration, certificate or foreign-document requirements."

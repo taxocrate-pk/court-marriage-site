@@ -19,7 +19,7 @@ export default function OnlineNikahRawalpindi() {
     <OnlineNikahCityLayout
       city="Rawalpindi"
       path="/online-nikah-rawalpindi"
-      phone="923332316871"
+      phone="+923332316871"
       displayPhone="+92 333 2316871"
       intro="Online Nikah in Rawalpindi can help couples who are in different cities or countries complete their marriage with a structured legal and documentation process. We focus on consent, witnesses, accurate Nikah Nama particulars, the appropriate Rawalpindi-side registration route and any overseas requirements instead of treating a remote ceremony as the end of the legal process."
       localOverview={[

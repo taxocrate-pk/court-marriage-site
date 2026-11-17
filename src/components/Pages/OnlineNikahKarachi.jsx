@@ -19,7 +19,7 @@ export default function OnlineNikahKarachi() {
     <OnlineNikahCityLayout
       city="Karachi"
       path="/online-nikah-karachi"
-      phone="923332316871"
+      phone="+923332316871"
       displayPhone="+92 333 2316871"
       intro="Online Nikah in Karachi can be a practical option where one or both parties cannot conveniently attend the same place, but the process should be planned as a complete legal and documentation matter rather than treated as a simple video ceremony. We assist with consent, witnesses, Nikah Nama preparation, local registration guidance and overseas-case coordination."
       localOverview={[

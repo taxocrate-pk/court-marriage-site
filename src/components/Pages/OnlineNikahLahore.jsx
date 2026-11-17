@@ -19,7 +19,7 @@ export default function OnlineNikahLahore() {
     <OnlineNikahCityLayout
       city="Lahore"
       path="/online-nikah-lahore"
-      phone="923332316871"
+      phone="+923332316871"
       displayPhone="+92 333 2316871"
       intro="Online Nikah in Lahore is useful for couples who are in different cities or countries, but the process should still be treated as a complete marriage matter involving consent, witnesses, accurate Nikah Nama particulars and the correct registration route. Our assistance is focused on legal clarity, documentation and practical coordination rather than blanket claims about instant completion."
       localOverview={[

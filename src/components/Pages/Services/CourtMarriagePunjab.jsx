@@ -50,7 +50,7 @@ const CourtMarriagePunjab = () => (
     metaTitle="Court Marriage in Punjab | Legal Nikah & Registration"
     metaDescription="Court Marriage in Punjab with legal guidance on free consent, documents, Nikah Nama, registration, fees and overseas cases across major cities."
     description="Court Marriage in Punjab requires a city- and district-aware approach. Punjab is not one registration jurisdiction, so couples in Lahore, Faisalabad, Multan, Gujranwala, Sialkot, Bahawalpur and other districts should have their identity, legal eligibility, prior marital status and local registration route reviewed before the Nikah Nama is prepared. We avoid generic claims that every Punjab marriage follows one office, one fee or one timeline."
-    phone="923332316871"
+    phone="+923332316871"
     displayPhone="+92 333 2316871"
     areas={['Lahore', 'Faisalabad', 'Multan', 'Gujranwala', 'Sialkot', 'Bahawalpur', 'Rawalpindi Division', 'Punjab districts']}
     localPlanning="Punjab-wide planning begins by identifying the exact city and district. The current provincial marriage-age law, the competent Nikah Registrar, local authority, residence details and any previous marital status should all be checked before the ceremony is arranged. A province-wide page can explain the general process, but the final registration plan must always be local to the particular district."

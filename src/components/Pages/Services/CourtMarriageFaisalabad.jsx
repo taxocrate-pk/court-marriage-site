@@ -50,7 +50,7 @@ const CourtMarriageFaisalabad = () => (
     metaTitle="Court Marriage in Faisalabad | Legal Nikah & Registration"
     metaDescription="Court Marriage in Faisalabad with legal guidance on age 18+, consent, documents, Nikah Nama, registration, fees and overseas marriage cases."
     description="Court Marriage in Faisalabad requires the same careful legal checks as any other Punjab marriage matter: both parties should be at least eighteen under the Punjab Child Marriage Restraint Act, 2026, free consent must be genuine, identity and marital status should be verified, and the correct local registration route should be identified before the Nikah Nama is finalised."
-    phone="923332316871"
+    phone="+923332316871"
     displayPhone="+92 333 2316871"
     officeAddress="Chamber No. 6, Jalal Law Chambers, Near Bakhshi Khana, District Courts, Faisalabad."
     areas={['District Courts Faisalabad', 'D-Ground', 'Peoples Colony', 'Madina Town', 'Jinnah Colony', 'Samanabad', 'Gulberg Faisalabad', 'Canal Road']}
